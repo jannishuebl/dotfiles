@@ -27,4 +27,4 @@
 	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "vim/.vim/bundle/vimerl"]
 	path = vim/.vim/bundle/vimerl
-	url = git@github.com:jimenezrick/vimerl.git
+	url = https://github.com/jimenezrick/vimerl.git
