@@ -31,3 +31,6 @@
 [submodule "vim/.vim/bundle/investigate.vim"]
 	path = vim/.vim/bundle/investigate.vim
 	url = https://github.com/Keithbsmiley/investigate.vim.git
+[submodule "vim/.vim/bundle/ultisnips"]
+	path = vim/.vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git

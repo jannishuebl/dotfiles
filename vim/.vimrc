@@ -26,7 +26,7 @@ set smartcase                   " ... unless they contain at least one capital l
 set ruler			" show the cursor position all the time
 set number			" line numbers on
 
-" Pathogen Plugin ausführen "
+" Pathogen Plugin ausf\"uhren "
 execute pathogen#infect()
 
 let mapleader = ","
@@ -51,6 +51,17 @@ nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
+function! Setumlauts()
+  %s/ü/\\"u
+  %s/ö/\\"o
+  %s/ä/\\"a
+  %s/Ü/\\"U
+  %s/Ö/\\"O
+  %s/Ä/\\"A
+  %s/ß/\\ss{}
+endfunction
+command! Latexumlauts :call Setumlauts()<CR>
+
 function! FeedVisualCmd(cmdpat)
     let [qr, qt] = [getreg('"'), getregtype('"')]
     silent norm! gvy
@@ -61,6 +72,7 @@ function! FeedVisualCmd(cmdpat)
         echohl ErrorMsg | echom 'Failed to run ' . cmd | echohl NONE
     endif
 endfunction
+
 
 vnoremap <leader>p :<c-u>call FeedVisualCmd('"curl" --data ''{"paste":{"title":"vim-paste","content":"%s","language":""}}'' -i -H "Accept: application/json" -H "Content-Type: application/json" http://vim-pastebin.herokuapp.com/pastes.json')<cr>
 "

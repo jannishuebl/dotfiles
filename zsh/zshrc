@@ -55,5 +55,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/opt/RubyMine-6.3.2/bin # Add RVM to PATH for scripting
+PATH=$PATH:/opt/android/eclipse # Add RVM to PATH for scripting
+PATH=$PATH:/opt/gradle/bin # Add RVM to PATH for scripting
 
 set -o vi
