@@ -18,6 +18,7 @@ alias much="git"
 alias very="git"
 alias r="rails"
 alias rvim="rvm use 2.1.0; vim"
+alias metoda_vpn='nmcli con up id metoda'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
